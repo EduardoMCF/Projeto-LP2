@@ -108,8 +108,7 @@ public class TutorController {
 	public String listarTutores() {
 		List<Aluno> alunosOrdenados = new ArrayList<Aluno>(dados.getAlunos().values());
 		Collections.sort(alunosOrdenados, comparator);
-		return mapToString(alunosOrdenados.stream()
-				.filter(aluno -> dados.getTutores().containsKey(aluno.getEmail())));
+		return mapToString(alunosOrdenados.stream().filter(aluno -> dados.getTutores().containsKey(aluno.getEmail())));
 	}
 
 	/**
@@ -122,11 +121,11 @@ public class TutorController {
 	public void configurarOrdem(String atributo) {
 		AtributoOrdem atrib;
 		try {
-			atrib = (AtributoOrdem.valueOf(atributo.toUpperCase()));
+			atribute = (AtributoOrdem.valueOf(atributo.toUpperCase()));
 		} catch (Exception e) {
 			throw new IllegalArgumentException(e);
 		}
-		switch (atrib) {
+		switch (atribute) {
 		case NOME:
 			this.comparator = new OrdenacaoNome();
 			break;

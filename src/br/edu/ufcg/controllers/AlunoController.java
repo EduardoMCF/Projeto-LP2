@@ -34,7 +34,7 @@ public class AlunoController {
 	 * 1, a forma de ordenção para a listagem de alunos é padrão por nome.
 	 * 
 	 * @param dados
-	 *                objeto que armazena o Map com os Alunos do sistema.
+	 *              objeto que armazena o Map com os Alunos do sistema.
 	 */
 	public AlunoController(Dados dados) {
 		this.dados = dados;
@@ -46,6 +46,7 @@ public class AlunoController {
 	 * Cadastra um aluno a partir do nome,matricula,curso,email e telefone,sendo o
 	 * último opcional. Adiciona ao Map armazenado por dados.
 	 * 
+	 *
 	 * @param nome
 	 *                String que representa o nome do aluno
 	 * @param matricula
@@ -68,6 +69,7 @@ public class AlunoController {
 	}
 
 	/**
+	 *
 	 * Recupera um aluno a partir da sua matricula.
 	 * 
 	 * @param matricula
